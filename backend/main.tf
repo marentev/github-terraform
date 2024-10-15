@@ -6,13 +6,17 @@ terraform {
     }
   }
 
-  backend "azurerm" {
+   backend "azurerm" {
     resource_group_name = "rg_backend_tfstate_mt"
     storage_account_name = "sabackendmt3rzg93rw8i"
     container_name = "tfstate"
     key = "backend.terraform.tfstate"
 
-  }
+    client_id = var.client_id
+    client_secret = var.client_secret
+    subscription_id = var.subscription_id
+    tenant_id = var.tenant_id
+   }
 }
 
 provider "azurerm" {

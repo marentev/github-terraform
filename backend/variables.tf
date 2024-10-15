@@ -27,3 +27,19 @@ variable "sa_backend_accesskey_name" {
   type        = string
   description = "Name of the storage account access key for the backend"
 }
+
+variable "client_id" {
+  type = string
+}
+
+variable "client_secret" {
+  type = string
+}
+
+variable "subscription_id" {
+  type = string
+}
+
+variable "tenant_id" {
+  type = string
+}
